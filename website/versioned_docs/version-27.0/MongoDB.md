@@ -56,6 +56,12 @@ describe('insert', () => {
 });
 ```
 
+If you are using multiple test files and writing more and more tests, you might want to consider running jest with the following parameter:
+```
+jest --runInBand
+```
+This will make sure that your tests won't run parallel as this might cause some issues regarding collections being emptied while you are trying to access them
+
 There's no need to load any dependencies.
 
 See [documentation](https://github.com/shelfio/jest-mongodb) for details (configuring MongoDB version, etc).
